@@ -1,0 +1,79 @@
+Interview Questions and Answers from this video.
+
+Question: What is Infrastructure as Code (IaC) and what are its benefits?
+Answer: IaC involves managing and provisioning infrastructure through code, rather than manual processes... Benefits include automation, reduced manual errors, increased consistency, and improved speed of deployment...
+
+Question: How does Terraform fit into the concept of Infrastructure as Code?
+Answer: Terraform is an IaC tool that allows you to define and provision infrastructure using a declarative configuration language.... It automates infrastructure management across various cloud providers and platforms.
+
+Question: Why is Terraform a highly sought-after skill for DevOps and Cloud Engineers?
+Answer: Terraform's universal approach allows DevOps engineers to automate infrastructure across different providers (AWS, Azure, GCP, etc.) using a single tool. This eliminates the need to learn provider-specific tools like CloudFormation or Azure Resource Manager. Additionally, it enables the creation of highly available and scalable infrastructure.
+
+Question: Can you explain how Terraform works with different cloud providers?
+Answer: Terraform uses an "API as code" approach to interact with cloud providers. It translates the configurations written in HashiCorp Configuration Language (HCL) into API calls specific to the provider.
+
+Question: What are the alternatives to Terraform?
+Answer: While Terraform is a popular choice, alternatives include Crossplane and Pulumi.
+
+Question: What is the basic Terraform workflow or lifecycle?
+Answer: The basic Terraform lifecycle consists of four main phases:
+Init: Initializes the Terraform configuration, downloads necessary plugins, and prepares the environment.
+Plan: Creates an execution plan, showing the changes that Terraform will apply to the infrastructure.
+Apply: Applies the changes defined in the configuration to provision or modify the infrastructure..
+Destroy: Destroys the resources managed by Terraform...
+
+Question: What is a Terraform state file and why is it important?
+Answer: The Terraform state file is used by Terraform to store information about the managed infrastructure. It keeps track of the resources created and their current state, allowing Terraform to understand what changes need to be made during subsequent operations.
+
+Question: What is the purpose of the terraform plan command?
+Answer: The terraform plan command creates an execution plan. It shows you what changes Terraform will make to your infrastructure before actually applying them.
+
+Question: What is the purpose of the terraform apply command?
+Answer: The terraform apply command applies the changes defined in your Terraform configuration to create or modify infrastructure.
+
+Question: What is the purpose of the terraform destroy command?
+Answer: The terraform destroy command is used to destroy all the resources that Terraform is managing.. It effectively undoes the changes made by terraform apply.
+
+Question: How do you configure Terraform to work with AWS?
+Answer: To configure Terraform for AWS, you need to:
+Provide AWS credentials, typically through AWS access keys.
+Specify the AWS region in the Terraform configuration.
+Use the provider block in your Terraform configuration file to define the AWS provider and region.
+
+Question: What is the significance of the main.tf file in Terraform?
+Answer: The main.tf file typically serves as the main configuration file for your Terraform project. It defines the provider configurations, resources, and other settings needed to manage your infrastructure. While the name can be different, main.tf is a common convention.
+
+Question: How do you define resources in Terraform?
+Answer: Resources are defined using resource blocks in Terraform configuration files. These blocks specify the type of resource (e.g., aws_instance), a unique name for the resource, and its configuration parameters..
+
+Question: What are some common issues you might encounter when writing Terraform configurations for AWS?
+Answer: Some common issues include:
+Missing required parameters, such as AMI IDs, subnet IDs, or key pair names.
+Incorrectly configured AWS credentials or regions.
+Lack of understanding of AWS concepts like VPCs, subnets, and security groups.
+
+Question: How can you troubleshoot issues in Terraform?
+Answer: Troubleshooting Terraform configurations involves.:
+Reading error messages carefully to understand the root cause of the issue.
+Using the terraform plan command to preview the changes and identify potential problems.
+Consulting the Terraform documentation and AWS documentation for guidance.
+Verifying AWS credentials and region settings.
+
+Question: How can you find the correct syntax for creating resources in Terraform?
+Answer: The best way to find the correct syntax is to consult the Terraform documentation. The documentation provides examples and explanations for each resource type.
+
+Question: What is the benefit of using an IDE with Terraform?
+Answer: Using an IDE like Visual Studio Code with the Terraform plugin can provide..:
+Syntax highlighting.
+Auto-completion.
+Linting.
+Code formatting.
+
+Question: Can you explain how to use code spaces with terraform?
+Answer: To use code spaces with terraform.:
+Fork the repository
+Create a code space on the appropriate branch.
+Add dev container configuration files and configure them for terraform and AWS....
+Rebuild the container for the changes to take effect.
+Verify terraform and AWS are installed
+
